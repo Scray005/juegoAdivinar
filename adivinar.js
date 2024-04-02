@@ -5,6 +5,20 @@ let cont;
 let auxNumeroGenerado = numeroGenerado.split("");
 
 function checkInput() {
+    var numero = document.getElementById("numero").value;
+    if (numero.length === 4) {
+    	encontrarNumero(numero); 
+        var ul = document.getElementById("numerosIngresados");
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(numero));
+        li.classList.add("list-group-item");
+        ul.appendChild(li);
+        document.getElementById("numero").value = ""; // Limpiar el campo de entrada después de agregar el número a la lista
+
+    }
+}
+
+/*function checkInput() {
     var input = document.getElementById("numero");
     var value = input.value.trim();
     
@@ -12,7 +26,7 @@ function checkInput() {
         encontrarNumero(value); 
         input.value = ""; 
     }
-}
+}*/
 
 function generarNumero(){
 	return Math.floor(Math.random() * (9999 - 1000 + 1) + 1000).toString();
