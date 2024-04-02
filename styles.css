@@ -1,21 +1,23 @@
 body {
-    background-color: black;
+    background-color: black; /* Establece el fondo negro */
+    color: white; /* Establece el color del texto en blanco */
+}
+
+.container {
     display: flex;
-    flex-direction: column; /* Para alinear los elementos en columna */
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
-    margin: 0;
 }
 
 label {
-    color: white;
-    margin-bottom: 10px; /* Espacio entre el texto y el campo de entrada */
+    margin-bottom: 10px;
 }
 
-input {
-    width: 80%; /* Ancho del campo de entrada, el 80% del ancho disponible */
-    max-width: 300px; /* Máximo ancho del campo de entrada */
+input[type="number"] {
+    width: 80%;
+    max-width: 300px;
     padding: 10px;
     border-radius: 5px;
     border: 2px solid white;

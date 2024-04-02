@@ -10,7 +10,7 @@ function checkInput() {
     	encontrarNumero(numero); 
         var ul = document.getElementById("numerosIngresados");
         var li = document.createElement("li");
-        li.appendChild(document.createTextNode(numero));
+        li.appendChild(document.createTextNode(numero+"-"+cont));
         li.classList.add("list-group-item");
         ul.appendChild(li);
         document.getElementById("numero").value = ""; // Limpiar el campo de entrada después de agregar el número a la lista
